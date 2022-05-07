@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:background="#008800"
+    tools:context=".BoxFragment">
+
+    <!--    android:gravity="center"
+        полезно в layout, чтобы сразу все кнопки расположить по центру
+
+        Также желательно прописать tools:context=".SecretFragment",
+        т.к. в nav_graph сразу будут подгружаться макетные файлы
+        (а так только плейсхолдер)
+    -->
+
+
+    <TextView
+        android:id="@+id/txtView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:fontFamily="casual"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:text="This is a Box"/>
+
+    <Button
+        android:id="@+id/goBackBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go Back"/>
+
+    <Button
+        android:id="@+id/openSecretBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Open secret"/>
+
+    <Button
+        android:id="@+id/generateNumberBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Generate number"/>
+
+
+</LinearLayout>
