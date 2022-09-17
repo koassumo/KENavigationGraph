@@ -19,7 +19,12 @@ import android.os.Bundle
 //   true - значит по умолчанию именно этот контейнер, он будет получать высокоуровневые
 //   запросы (goBack и т.д.) Если контейнеров несколько, по дефолту - только один
 //
-//
+//  7. Убрать из MainActivity кусок типа, тк. теперь об этом заботится nav_graph - устанавливает default:
+//            if (savedInstanceState == null) {
+//            supportFragmentManager.beginTransaction()
+//                .replace(R.id.fragmentContainer, MainFragment.newInstance())
+//                .commitNow()
+//        }
 //
 // .
 
@@ -27,8 +32,14 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+//            Убрать, тк. теперь об этом заботится nav_graph - устанавливает default:
+//            if (savedInstanceState == null) {
+//            supportFragmentManager.beginTransaction()
+//                .replace(R.id.fragmentContainer, MainFragment.newInstance())
+//                .commitNow()
+//        }
+
     }
-
-
 
 }

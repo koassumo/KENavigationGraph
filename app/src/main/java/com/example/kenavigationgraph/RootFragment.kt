@@ -41,9 +41,11 @@ class RootFragment : Fragment(R.layout.fragment_root) {
     private fun openBox (color: Int) {
         findNavController().navigate(
             R.id.action_rootFragment_to_boxFragment,            // переход (action)
-            bundleOf(BoxFragment.ARG_COLOR to color,
-            )     // передача данных
+            bundleOf(BoxFragment.ARG_COLOR to color,     // передача данных
+            )
         )
+        // Classic way for compare:
+        // activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.container, BlankFragment())?.addToBackStack(null)?.commit()
     }
 
 }
